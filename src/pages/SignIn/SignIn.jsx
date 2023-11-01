@@ -1,6 +1,7 @@
 import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
 import loginImage from '../../assets/image/login.svg';
+import GoggleLogin from '../../Components/GoogleLogin/GoogleLogin';
 
 
 const SignIn = () => {
@@ -43,7 +44,7 @@ const SignIn = () => {
                             />
                         </div>
                         <div className="relative !mt-8">
-                            <button type="submit" className="btn btn-primary w-full">
+                            <button type="submit" className="btn bg-orange-500 w-full">
                                 Login
                             </button>
                         </div>
@@ -51,21 +52,15 @@ const SignIn = () => {
                             <p>
                                 Don&apos;t have an account?{' '}
                                 <span
-                                    className="text-primary hover:underline cursor-pointer"
+                                    className="text-orange-500 hover:underline cursor-pointer"
                                     onClick={() => navigate('/signup')}
                                 >
                                     Sign-up
                                 </span>
                             </p>
                         </div>
-                        {/* <button
-                            type="button"
-                            className="btn btn-primary w-full"
-                            onClick={handleGoogleLogin}
-                        >
-                            Login with Google
-                        </button> */}
-                        {/* <GoggleLogin /> */}
+
+                        <GoggleLogin />
                     </form>
                 </div>
             </div>

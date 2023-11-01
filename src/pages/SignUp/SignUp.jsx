@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import loginImage from '../../assets/image/login.svg';
 import { useForm, useWatch } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
+import GoggleLogin from '../../Components/GoogleLogin/GoogleLogin';
 
 
 
@@ -44,9 +45,9 @@ const SignUp = () => {
                 <img src={loginImage} className="md:h-3/4 md:w-3/4" alt="" />
             </div>
             <div className="w-full md:w-1/2  grid place-items-center">
-                <div className="bg-primary/5 w-full max-w-sm rounded-lg grid place-items-center p-10">
+                <div className="bg-primary/5 w-full max-w-sm rounded-lg grid place-items-center p-5">
                     <h1 className="mb-6 font-medium text-2xl">Sign up</h1>
-                    <form className="space-y-5 w-full" onSubmit={handleSubmit(onSubmit)}>
+                    <form className="space-y-4 w-full" onSubmit={handleSubmit(onSubmit)}>
                         <div className="flex flex-col items-start">
                             <label htmlFor="email">Name</label>
                             <input
@@ -94,10 +95,10 @@ const SignUp = () => {
                                 />
                             </div>
                         </div>
-                        <div className="mt-5 ">
+                        <div className="mt-3 ">
                             <button
                                 type="submit"
-                                className="btn btn-primary w-full disabled:bg-gray-300 disabled:cursor-not-allowed"
+                                className="btn bg-orange-500 w-full disabled:text-orange-500 disabled:cursor-not-allowed"
                                 disabled={disabled}
                             >
                                 Sign up
@@ -107,21 +108,14 @@ const SignUp = () => {
                             <p>
                                 Already have an account?{' '}
                                 <span
-                                    className="text-primary hover:underline cursor-pointer"
+                                    className="text-orange-500 hover:underline cursor-pointer"
                                     onClick={() => navigate('/signin')}
                                 >
                                     Sign-in
                                 </span>
                             </p>
                         </div>
-                        {/* <button
-                            type="button"
-                            className="btn btn-primary w-full"
-                            onClick={handleGoogleLogin}
-                        >
-                            Login with Google
-                        </button> */}
-                        {/* <GoggleLogin /> */}
+                        <GoggleLogin />
                     </form>
                 </div>
             </div>

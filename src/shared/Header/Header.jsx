@@ -49,7 +49,6 @@ const Header = () => {
                             <li key={i}  >
                                 <Link
                                     to={nav.path}
-                                    className={({ isActive }) => isActive ? 'bg-lime-400' : ''}
                                 >
                                     {nav.display}
                                 </Link>
@@ -77,7 +76,7 @@ const Header = () => {
                             </ul>
                         </div> :
                         <Link to='signin'>
-                            <button className="bg-orange-500 rounded-lg p-1">SignIn</button>
+                            <button className="text-orange-500 rounded-lg p-2 font-bold">SignIn</button>
                         </Link>
 
                 }
